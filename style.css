@@ -100,3 +100,18 @@ button {
 button:hover {
   transform: scale(1.05);
 }
+.book {
+  animation: openBook 1.2s ease forwards;
+}
+
+@keyframes openBook {
+  from {
+    transform: scale(0.8) rotateX(20deg);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1) rotateX(0);
+    opacity: 1;
+  }
+}
+
