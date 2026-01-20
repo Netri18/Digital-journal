@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>My Digital Journal</title>
+
+  <!-- Handwriting Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1 class="title">📖 My Digital Journal</h1>
+
+  <div class="book">
+    <div class="page left">
+      <textarea id="leftPage" placeholder="Dear diary..."></textarea>
+    </div>
+
+    <div class="page right flip" id="flipPage">
+      <div class="front">
+        <textarea id="rightPage" placeholder="Today I felt..."></textarea>
+      </div>
+      <div class="back"></div>
+    </div>
+  </div>
+
+  <div class="controls">
+    <button onclick="prevPage()">← Previous</button>
+    <button onclick="nextPage()">Next →</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

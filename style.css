@@ -1,0 +1,102 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #f6efe6;
+  font-family: 'Caveat', cursive;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+}
+
+.title {
+  margin: 20px;
+  font-size: 36px;
+  color: #3a2f2f;
+}
+
+.book {
+  display: flex;
+  width: 800px;
+  height: 450px;
+  background: #e8dccb;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+  border-radius: 10px;
+  perspective: 2000px;
+  overflow: hidden;
+}
+
+.page {
+  width: 50%;
+  height: 100%;
+  padding: 30px;
+  background: #fdf8f2;
+  position: relative;
+  background-image: url("https://www.transparenttextures.com/patterns/paper-fibers.png");
+}
+
+.left {
+  border-right: 2px solid #e0d4c3;
+}
+
+textarea {
+  width: 100%;
+  height: 100%;
+  border: none;
+  resize: none;
+  outline: none;
+  background: transparent;
+  font-family: 'Caveat', cursive;
+  font-size: 24px;
+  line-height: 1.8;
+  color: #3a2f2f;
+}
+
+/* FLIP PAGE */
+.flip {
+  transform-style: preserve-3d;
+  transform-origin: left;
+  transition: transform 0.8s ease;
+}
+
+.flip.flipped {
+  transform: rotateY(-180deg);
+}
+
+.front,
+.back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.back {
+  background: #fdf8f2;
+  transform: rotateY(180deg);
+}
+
+/* CONTROLS */
+.controls {
+  margin-top: 20px;
+}
+
+button {
+  font-family: 'Caveat', cursive;
+  font-size: 20px;
+  padding: 10px 20px;
+  margin: 0 10px;
+  border: none;
+  background: #e6b7c6;
+  color: #3a2f2f;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
